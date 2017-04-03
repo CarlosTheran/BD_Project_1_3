@@ -26,8 +26,6 @@ public class TwitterScreenNamesMapper extends Mapper<LongWritable, Text, Text, I
             //User user = TwitterObjectFactory.createUser(rawTweet);
             String tweetScreenName = status.getUser().getScreenName();
 
-
-
             context.write(new Text(tweetScreenName), new IntWritable(1));
 
         }
